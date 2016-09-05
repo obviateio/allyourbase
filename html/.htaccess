@@ -1,5 +1,6 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} !^allyour.basearebelongto.us
+
+RewriteCond %{HTTP:X-Forwarded-Host} !^allyour.basearebelongto.us
 RewriteRule ^(.*)$ https://allyour.basearebelongto.us/$1 [R=302,L]
 
 RewriteCond %{REQUEST_URI} !AYB3.swf
