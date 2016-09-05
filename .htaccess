@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^allyour.basearebelongto.us
+RewriteRule ^(.*)$ http://allyour.basearebelongto.us/$1 [R=302,L]
+
+RewriteCond %{REQUEST_URI} !AYB3.swf
+RewriteRule ^(.*)$ http://allyour.basearebelongto.us/AYB3.swf [R=302,L]
